@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flux Extension Architect"
+  short_description: "Standardize FluxPanel extensions with mandatory data-scope governance."
+  default_prompt: "Review this FluxPanel feature extension and produce a strict standard review package with architecture direction, permission closure (interface/data/frontend), graded quality gates, and acceptance tests."
