@@ -22,12 +22,17 @@ Mark each item as `pass`, `risk`, or `blocked`.
 - `data_scope_sql` alias mapping is validated.
 - Custom scope (`2`) has clear `role -> dept` source.
 
-## E. Operational Risk
+## E. Dictionary Governance
+- Enum/status/type fields that need label rendering are evaluated for `/system/dict`.
+- Required `sys_dict_type` and `sys_dict_data` SQL is included.
+- Frontend uses `useDict()` and `dict-tag` instead of hardcoded label maps.
+
+## F. Operational Risk
 - Export/import reads respect the same data scope as list/detail.
 - Cross-department or cross-owner bypass attempts are tested.
 - Admin and non-admin behavior differences are explicit and expected.
 
-## F. Delivery Readiness
+## G. Delivery Readiness
 - PR includes a data permission design card.
 - Mandatory tests are attached as evidence.
 - Merge is blocked if mandatory gate checks are missing.

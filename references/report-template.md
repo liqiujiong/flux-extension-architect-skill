@@ -16,6 +16,7 @@
 - Frontend files to add/change:
 - API contract changes:
 - Data model changes:
+- Dictionary plan:
 
 ## 4. Permission Closure (Mandatory)
 - Interface permission plan:
@@ -41,6 +42,7 @@
 ## 7. Test And Acceptance Plan
 - Required test scenarios:
 - Data-scope regression scenarios:
+- Dictionary rendering scenarios:
 - Acceptance criteria:
 
 ## 8. Delivery Plan

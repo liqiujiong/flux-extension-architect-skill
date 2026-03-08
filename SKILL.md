@@ -27,6 +27,7 @@ Treat data permission control as mandatory, not optional.
 4. Design backend and frontend extension contracts
 - Follow `references/backend-extension-spec.md` and `references/frontend-extension-spec.md`.
 - List concrete file-level changes and contracts (request fields, response shape, permission keys).
+- If the module introduces statuses, types, or other enums, read `references/dict-governance.md` and decide whether `/system/dict` must be extended.
 
 5. Stage C2: Data permission design and validation (mandatory)
 - Read `references/data-permission-architecture.md`.
@@ -59,6 +60,9 @@ Treat data permission control as mandatory, not optional.
 4. Require explicit `role -> dept` source when scope is custom (`data_scope=2`).
 5. Reject frontend-only permission control without backend dependency checks.
 6. Require "data permission design card" in PRs for new modules or query-scope changes.
+7. Require dictionary governance for new enum fields:
+- Provide `sys_dict_type` and `sys_dict_data` SQL when the field is business-configurable or must render labels in the UI.
+- Reject frontend hardcoded enum label mapping when the field belongs in `/system/dict`.
 
 ## Output Standard
 
@@ -66,6 +70,7 @@ Always include:
 - extension goal and scope
 - architecture direction and key tradeoffs
 - file-level implementation map (backend and frontend)
+- dictionary plan for enum/status/type fields
 - permission closure proof (interface/data/frontend)
 - graded quality-gate results
 - acceptance tests, including data-scope regression scenarios
@@ -77,6 +82,7 @@ Always include:
 - `references/focus-checklist.md`
 - `references/backend-extension-spec.md`
 - `references/frontend-extension-spec.md`
+- `references/dict-governance.md`
 - `references/data-permission-architecture.md`
 - `references/quality-gates.md`
 - `references/report-template.md`

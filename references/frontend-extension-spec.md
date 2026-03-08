@@ -24,3 +24,9 @@
 - Reflect filtered results as-is; never imply hidden data is unavailable globally.
 - For denied operations, show clear permission-related messages.
 - Keep export result expectations aligned with current filtered scope.
+
+## 6. Dictionary Usage
+- For dictionary-backed fields, load options with `proxy.useDict('dict_type')`.
+- Render table labels with `dict-tag` instead of handwritten `value -> label` mappings.
+- Use dictionary options for query filters and edit forms so list, filter, and edit stay consistent.
+- If a field should display labels in the admin UI and remain configurable, do not hardcode options in the page.

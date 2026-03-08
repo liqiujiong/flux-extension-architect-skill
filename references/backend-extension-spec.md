@@ -35,3 +35,9 @@
 ## 7. Logging And Audit
 - Add operation logs for create/update/delete/import/export/reset flows.
 - Include actor, target ID, and operation result for traceability.
+
+## 8. Dictionary Governance
+- For enum-like business fields, prefer `/system/dict` over frontend hardcoded mappings.
+- Provide `sys_dict_type` and `sys_dict_data` SQL as part of the delivery package.
+- If using code generation metadata, set the column `dict_type` so generated pages/forms inherit dictionary behavior.
+- Keep dictionary type names stable because backend cache and frontend `useDict('dict_type')` depend on them.
